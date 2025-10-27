@@ -16,16 +16,15 @@
         <link rel="icon" href="images/bigbrain.png">
     </head>
     <body>
+        <header id="top"><!--is it ok for headers to have ids?-->
+            <nav> <!--navbar, will ideally either be centered or left aligned-->
+                <a href="home.html">Home Page</a>
+                <a href="contact.html">Contact Page</a>
+                <a href="about.html">About Page</a> 
+            </nav>
+            <h1>Professional Information</h1>
+        </header>
         <main>
-            <header id="top"><!--is it ok for headers to have ids?-->
-                <nav> <!--navbar, will ideally either be centered or left aligned-->
-                    <a href="home.html">Home Page</a>
-                    <a href="contact.html">Contact Page</a>
-                    <a href="about.html">About Page</a> 
-                </nav>
-                <h1>Professional Information</h1>
-            </header>
-
             <section id="quick-links"><!--this will be the links section-->
                 <h2>Quick Links:</h2>
                 <a href="https://www.linkedin.com/in/eugene-myong/" target="blank">LinkedIn</a>
@@ -125,16 +124,17 @@
                 <certification-block cert="A+">
                     <h3>CompTIA A+</h3>
                     <img src="images/CompTIA_A+_ce_certificate-1.png" width="400" 
-                    alt="An image of the CompTIA certification"><br>
+                    alt="An image of the CompTIA certification" loading="lazy"><br>
+                    <!--loading="lazy" should be reviewed-->
                     <a href="https://www.credly.com/badges/c78ba532-eae3-490e-9bf4-914f0c88f620" 
                     target="_blank">Credly Link</a>
                 </certification-block>
                 <a href="#top">Back to top</a>
             </section>
             <hr>
-            <footer>
-                <i>Trademark Eugene Myong, All Rights Reserved</i>
-            </footer>
         </main>
+        <footer>
+            <i>Trademark Eugene Myong, All Rights Reserved</i>
+        </footer>
     </body>
 </html>
