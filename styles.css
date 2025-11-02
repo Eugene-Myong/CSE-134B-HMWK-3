@@ -1,0 +1,277 @@
+/*global rules*/
+:root {
+    --main-color: #aa45ed;
+    --second-color: #8525cf;
+    --gap-default: 2em;
+    --border-radius-default: 12px;
+    --navbar-diff-exact: 55px;
+}
+
+@font-face {
+  font-family: 'TeX Gyre Adventor';
+  src: url('fonts/TeXGyreAdventor-Regular.woff2') format('woff2'),
+       url('fonts/TeXGyreAdventor-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'TeX Gyre Adventor';
+  src: url('fonts/TeXGyreAdventor-Bold.woff2') format('woff2'),
+       url('fonts/TeXGyreAdventor-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: 'TeX Gyre Adventor';
+  src: url('fonts/TeXGyreAdventor-Italic.woff2') format('woff2'),
+       url('fonts/TeXGyreAdventor-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'TeX Gyre Adventor';
+  src: url('fonts/TeXGyreAdventor-BoldItalic.woff2') format('woff2'),
+       url('fonts/TeXGyreAdventor-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+                                        /*navbar*/
+
+nav {
+    display:block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--main-color, #aa45ed);
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--gap-default);
+    padding: 1.25em;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1em;
+    border-radius: var(--border-radius-default);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--second-color, #8525cf);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 650px) {
+  .hamburger {
+    display: block; 
+  }
+
+  .nav-links{
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    margin-top: -1em; 
+    width: 100%;
+    background-color: var(--main-color, #aa45ed);
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+}
+                                        /*home page banner/pfp*/
+#pfp {
+    border: 1px black solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner {
+    margin-top: var(--navbar-diff-exact);
+    position: relative;
+    height: 50vh;
+    background-image: url('images/placeholder.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+}
+
+#intro {
+    text-align: center;
+}
+                                        /*professional section group of links and link buttons*/
+.linkgroup{
+    display: flex;     
+    flex-wrap: wrap;               
+    justify-content: center;          
+    align-items: center;              
+    gap: var(--gap-default);                              
+}
+
+.linkgroup a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px var(--second-color, #8525cf);
+    background-color: var(--second-color, #8525cf);
+    color: white;
+}
+
+.linkgroup a:active {
+    transform: translateY(0); 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.linkbutton {
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 10rem; 
+    padding: 0.5em; 
+    background-color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius-default);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.linkbutton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px var(--second-color, #8525cf);
+    background-color: var(--second-color, #8525cf);
+    color: white;
+}
+
+.profsection {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 1em;
+}
+
+.profsection h2 {
+    margin-top: -10px;
+    font-size: 1.5em;
+}
+
+                                        /*educational section*/
+
+.edugrid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    gap: var(--gap-default); 
+}
+
+.eduimg {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    flex-shrink: 0; 
+}
+
+.edutext {
+    text-align: left;
+    flex: 1; 
+    line-height: 1.6;
+}
+
+                                        /*Layout for cards (projects and certifications)*/
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gap-default);
+    padding: 0 20px;
+    justify-items: center;                    
+}
+
+.module-card {
+    display: flex;
+    flex-direction: column;       
+    align-items: center;      
+    min-width: 300px;
+    min-height: 400px;
+    max-width: 400px;
+    max-height: 200px;
+    color: black;  
+    background-color: white;
+    text-decoration: none;        
+    border-radius: var(--border-radius-default);
+    padding: 1em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s, box-shadow 0.25s;
+
+}
+
+.module-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-default);
+    margin-bottom: 15px;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px var(--second-color, #8525cf);
+    background-color: var(--second-color, #8525cf);
+    color: white;
+}
+
+.module-card:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: var(--second-color, #8525cf);
+    color: white;
+}
+
