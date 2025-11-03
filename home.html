@@ -6,43 +6,56 @@
         <title>Home Page</title>
         <link rel="icon" href="images/bigbrain.png">
         <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=TeX+Gyre+Adventor&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <nav>
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <input id="menu-toggle" type="checkbox" class="menu-toggle">
                 <label for="menu-toggle" class="hamburger">☰</label>
                 <div class="nav-links">
                     <a href="home.html">Home</a>
                     <a href="prof.html">Professional Information</a>
-                    <a href="contact.html">Contact Me</a>
-                    <a href="about.html">About Me</a> 
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a> 
                 </div>
             </nav>
 
             <section class="banner">
-                <img src="images/bigbrain.png" alt="Profile Picture" id="pfp">
+                <picture>
+                    <source
+                        srcset="images/pfp/pfp_small.webp"
+                        media="(max-width: 600px)"
+                        type="image/webp">
+                    <source
+                        srcset="images/pfp/pfp.webp"
+                        media="(min-width: 601px)"
+                        type="image/webp">
+                    <img
+                        src="images/pfp/pfp.jpg"
+                        alt="Profile Picture"
+                        id="pfp">
+                </picture>
             </section>
             <h1>The Eugene Myong Site</h1>
         </header>
         <main>  
-            <section id="intro">
-                <h2>Made by Eugene Myong (who could've guessed?)</h2>
-                <p>My name is Eugene Myong (if you couldn't tell from the title), and it's nothing but the utmost of pleasures to meet you!</p>
+            <section class="intro">
+                <h2>Made for Eugene Myong, by Eugene Myong</h2>
+                <h3>wait</h3>
+                <p>My name is Eugene Myong and it's nothing but the utmost of pleasures to meet you!</p>
                 <p>
                     I'm a current undergraduate student at The University of Californa San Diego studying 
-                    Mathematics, Computer Science, and Data Science. I'm working towards breaking into the Cybersecurity
-                    field while also exploring all my intrests in technology.
+                    Mathematics, Computer Science, and Data Science. Right now, I'm working towards getting 
+                    into Cybersecurity through IT, while exploring my interests in various tech areas.
                 </p>
                 <p>
-                    Use the links in the navigation bar above or click the buttons below to go to the various parts of this site!
+                    Use the links in the navigation bar above or click the buttons below to get started!
                 </p>
             </section>
             <div class="linkgroup">
-                <a href="prof.html" class="linkbutton" style="margin-bottom: 15px;">Professional Page</a> 
-                <a href="contact.html" class="linkbutton" style="margin-bottom: 15px;">Contact Page</a> 
-                <a href="about.html" class="linkbutton" style="margin-bottom: 15px;">About Page</a>
+                <a href="prof.html" class="linkbutton" style="margin-bottom: 15px;">Professional</a> 
+                <a href="contact.html" class="linkbutton" style="margin-bottom: 15px;">Contact</a> 
+                <a href="about.html" class="linkbutton" style="margin-bottom: 15px;">About</a>
             </div>
         </main>
         <hr>

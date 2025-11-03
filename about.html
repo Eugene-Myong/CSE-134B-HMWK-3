@@ -18,32 +18,27 @@
     <body>
         <header id="top">
             <nav>
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <input id="menu-toggle" type="checkbox" class="menu-toggle">
                 <label for="menu-toggle" class="hamburger">☰</label>
                 <div class="nav-links">
                     <a href="home.html">Home</a>
                     <a href="prof.html">Professional Information</a>
-                    <a href="contact.html">Contact Me</a>
-                    <a href="about.html">About Me</a> 
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a> 
                 </div>
             </nav>
-            <h1 style="margin-top: 80px;">More About Me</h1>
+            <h1 style="margin-top: 80px;">About</h1>
         </header>
         <main>
-            <picture>
-                <source srcset="images/placeholder-portrait.jpg" media="(orientation: portrait)">
-                <img src="images/placeholder.jpeg" width="400" alt="a beautiful sunset over the shimmering ocean">
-            </picture>
-
-            <quote-generator>
+            <quote-generator id="quotegen">
                 <blockquote>
                     <p >“If it ain't broke, then break it.”</p>
-                    <cite>— Eugene Myong, sometime in high sschool.</cite>
+                    <cite>— me, sometime in high school.</cite>
                 </blockquote>
                 <button id="new-quote">New quote</button>
             </quote-generator>
 
-            <section>
+            <section class="intro">
                 <h2>Welcome to my About Me page!</h2>
                 <p>
                     Here you'll get to discover more about me like my hobbies, intrests, and maybe 
@@ -54,52 +49,171 @@
                     Click on any of these links to jump to their respective sections, or just start 
                     scrolling!
                 </p>
-                <div>
-                    <a href="#boy-scouts">Boy Scouts</a>
-                    <a href="#taekwondo">Taekwondo</a>
-                    <a href="#badminton">Badminton</a>
+                <div class="linkgroup">
+                    <a href="#boy-scouts" class="linkbutton">Boy Scouts</a>
+                    <a href="#taekwondo" class="linkbutton">Taekwondo</a>
+                    <a href="#badminton" class="linkbutton">Badminton</a>
                 </div>
             </section>
-
             <hr>
-
-            <article id="boy-scouts"><!--for sections like these, images will be wrapped in text
-                idk if i explained that right like text will wrap aroudn it like in textbook
-                ok thats not a good example tho use figures?-->
+            <section class="profsection">
                 <h2>Boy Scouts</h2>
-                <p>
-                    I joined the Cub Scouts of America in sixth grade, so I was quite late to the party.<br>
-                    (placeholder text will add more)            
-                </p>
-                <img src="images/placeholder.jpeg" width="200" alt="placeholder image for now">
-                <a href="#top">Back to top</a>
-            </article>
+                <article id="boy-scouts" class="descgrid">
+                <!--
+                    <picture>
+                        <source
+                            srcset="images/eagle_scout/eagle_scout_small.webp 450w, images/eagle_scout/eagle_scout.webp 751w"
+                            sizes="(max-width: 600px) 225px"
+                            type="image/webp">
+                        <source
+                            srcset="images/eagle_scout/eagle_scout_small.jpg 450w, images/eagle_scout/eagle_scout.jpg 751w"
+                            sizes="(max-width: 600px) 225px"
+                            type="image/jpg">
+                        <img 
+                            srcset="images/eagle_scout/eagle_scout_small.jpg 450w, images/eagle_scout/eagle_scout.jpg 751w"
+                            sizes="(max-width: 600px) 225px, (min-width: 1200px) 751w"
+                            src="images/eagle_scout/eagle_scout_small.jpg"
+                            alt="A picture of me in my full Eagle Scout Uniform"
+                            class="aboutimg">
+                    </picture>
+                -->
+                    <picture>
+                        <source
+                            srcset="images/eagle_scout/eagle_scout.webp"
+                            media="(min-width: 601px)"
+                            type="image/webp"
+                            width="450"
+                            height="450">
+                        <source
+                            srcset="images/eagle_scout/eagle_scout_small.webp"
+                            media="(max-width: 600px)"
+                            type="image/webp"
+                            width="200"
+                            height="200">
+                        <source
+                            srcset="images/eagle_scout/eagle_scout.jpg"
+                            media="(min-width: 600px)"
+                            type="image/webp"
+                            width="450"
+                            height="450">
+                        <source
+                            srcset="images/eagle_scout/eagle_scout_small.jpg"
+                            media="(min-width: 601px)"
+                            type="image/webp"
+                            width="200"
+                            height="200">
+                        <img 
+                            src="images/eagle_scout/eagle_scout_small.jpg"
+                            alt="A picture of me in my full Eagle Scout Uniform"
+                            class="aboutimg">
+                    </picture>
 
+                    <p class="desctext" style="line-height: 1.25;">
+                        One day my brother decided to join the Cub Scouts of America, and so naturally I joined as 
+                        well. The difference is, my brother is two years younger than me, so he joined as a Bear 
+                        Scout, while I joined as a Webelos. With four months until I bridge to a Boy Scout. 
+                        Quite late to the party I was.<br>
+                        Nonetheless, I joined and very shortly after bridged into Boy Scouts. I have no regrets 
+                        joining Boy Scouts as it really did teach me so many things I couldn't have learned 
+                        otherwise: the expected things like camping/outdoorsmanship, knots, first aid, 
+                        fire safety and such, but also less tangible things like how to be a good leader, 
+                        how to effectively help/teach someone else, and how to work in a team.<br>
+                        And I also had a great time, making friends, going camping all the time (which I already
+                        did with my family before so now I got to go even more!), learning things from adults
+                        who had so much to share (and loved sharing it). I even had the honor of becoming an
+                        Eagle Scout and Eagling out.<br>
+                        Now, I carry what I've gained with me in everything I do, and I've been pleasantly 
+                        surprised at just how often I use what I've learned. I'm sure it will serve me well 
+                        far into the future, and I know that no matter how the future may turn out, I will <strong>
+                        Be Prepared.</strong>
+                    </p>      
+                </article>
+                <a href="#top" class="linkbutton">Back to top</a>
+            </section>
             <hr>
-
-            <article id="taekwondo">
+            <section class="profsection">
                 <h2>Taekwondo</h2>
-                <p>
-                    My mom came up to me one day and said "How would you like to know how to fight"? And 
-                    me being me I said "I don't really want to" but she made me join anyway. <br> 
-                    (placeholder text will add more)
-                </p>
-                <img src="images/placeholder.jpeg" width="200" alt="placeholder image for now">
-                <a href="#top">Back to top</a>
-            </article>
-
+                <article id="taekwondo" class="descgrid">
+                    <p class="desctext" style="line-height: 1.25;">
+                        One day my brother decided to join the Cub Scouts of America, and so naturally I joined as 
+                        well. The difference is, my brother is two years younger than me, so he joined as a Bear 
+                        Scout, while I joined as a Webelos. With four months until I bridge to a Boy Scout. 
+                        Quite late to the party I was.<br>
+                        Nonetheless, I joined and very shortly after bridged into Boy Scouts. I have no regrets 
+                        joining Boy Scouts as it really did teach me so many things I couldn't have learned 
+                        otherwise: the expected things like camping/outdoorsmanship, knots, first aid, 
+                        fire safety and such, but also less tangible things like how to be a good leader, 
+                        how to effectively help/teach someone else, and how to work in a team.<br>
+                        And I also had a great time, making friends, going camping all the time (which I already
+                        did with my family before so now I got to go even more!), learning things from adults
+                        who had so much to share (and loved sharing it). I even had the honor of becoming an
+                        Eagle Scout and Eagling out.<br>
+                        Now, I carry what I've gained with me in everything I do, and I've been pleasantly 
+                        surprised at just how often I use what I've learned. I'm sure it will serve me well 
+                        far into the future, and I know that no matter how the future may turn out, I will <strong>
+                        Be Prepared.</strong>
+                    </p> 
+                    <picture>
+                        <source
+                            srcset="images/eagle_scout/eagle_scout_small.webp 450w, images/eagle_scout/eagle_scout.webp 751w"
+                            sizes="(max-width: 600px) 225px"
+                            type="image/webp">
+                        <source
+                            srcset="images/eagle_scout/eagle_scout_small.jpg 450w, images/eagle_scout/eagle_scout.jpg 751w"
+                            sizes="(max-width: 600px) 225px"
+                            type="image/jpg">
+                        <img 
+                            srcset="images/eagle_scout/eagle_scout_small.jpg 450w, images/eagle_scout/eagle_scout.jpg 751w"
+                            sizes="(max-width: 600px) 225px, (min-width: 1200px) 751w"
+                            src="images/eagle_scout/eagle_scout_small.jpg"
+                            alt="A picture of me in my full Eagle Scout Uniform"
+                            class="aboutimg">
+                    </picture>     
+                </article>
+                <a href="#top" class="linkbutton">Back to top</a>
+            </section>
             <hr>
-
-            <article id="badminton">
+            <section class="profsection">
                 <h2>Badminton</h2>
-                <p>
-                    So in high school, our Physical Education class had one day a year where the Badminton 
-                    would put on a demonstration.<br>
-                    (placeholder text will add more)
-                </p>
-                <img src="images/placeholder.jpeg" width="200" alt="placeholder image for now">
-                <a href="#top">Back to top</a>
-            </article>
+                <article id="badminton" class="descgrid">
+                    <picture>
+                        <source
+                            srcset="images/eagle_scout/eagle_scout_small.webp 450w, images/eagle_scout/eagle_scout.webp 751w"
+                            sizes="(max-width: 600px) 225px"
+                            type="image/webp">
+                        <source
+                            srcset="images/eagle_scout/eagle_scout_small.jpg 450w, images/eagle_scout/eagle_scout.jpg 751w"
+                            sizes="(max-width: 600px) 225px"
+                            type="image/jpg">
+                        <img 
+                            srcset="images/eagle_scout/eagle_scout_small.jpg 450w, images/eagle_scout/eagle_scout.jpg 751w"
+                            sizes="(max-width: 600px) 225px, (min-width: 1200px) 751w"
+                            src="images/eagle_scout/eagle_scout_small.jpg"
+                            alt="A picture of me in my full Eagle Scout Uniform"
+                            class="aboutimg">
+                    </picture>     
+                    <p class="desctext" style="line-height: 1.25;">
+                       One day my brother decided to join the Cub Scouts of America, and so naturally I joined as 
+                        well. The difference is, my brother is two years younger than me, so he joined as a Bear 
+                        Scout, while I joined as a Webelos. With four months until I bridge to a Boy Scout. 
+                        Quite late to the party I was.<br>
+                        Nonetheless, I joined and very shortly after bridged into Boy Scouts. I have no regrets 
+                        joining Boy Scouts as it really did teach me so many things I couldn't have learned 
+                        otherwise: the expected things like camping/outdoorsmanship, knots, first aid, 
+                        fire safety and such, but also less tangible things like how to be a good leader, 
+                        how to effectively help/teach someone else, and how to work in a team.<br>
+                        And I also had a great time, making friends, going camping all the time (which I already
+                        did with my family before so now I got to go even more!), learning things from adults
+                        who had so much to share (and loved sharing it). I even had the honor of becoming an
+                        Eagle Scout and Eagling out.<br>
+                        Now, I carry what I've gained with me in everything I do, and I've been pleasantly 
+                        surprised at just how often I use what I've learned. I'm sure it will serve me well 
+                        far into the future, and I know that no matter how the future may turn out, I will <strong>
+                        Be Prepared.</strong>
+                    </p> 
+                </article>
+                <a href="#top" class="linkbutton">Back to top</a>
+            </section>
             <hr>
         </main>
         <footer>
